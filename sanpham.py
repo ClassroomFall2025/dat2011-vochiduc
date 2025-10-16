@@ -1,31 +1,35 @@
-class sanpham:
-    def __init__(self, ten_san_pham, gia, Giam_gia):
-        self.__ten_san_pham = ten_san_pham
+class SanPham:
+    def __init__(self, tensp, gia, giam_gia=0):
+        self.__tensp = tensp
         self.__gia = gia
-        self.__Giam_gia = Giam_gia
+        self.__giam_gia = giam_gia
 
-    # def doc_giam_gia(self):
-    #     return self.__Giam_gia
-    # def ghi_giam_gia(self,giam_gia_moi):
-    #     self.__Giam_gia = giam_gia_moi
-    def get_ten_sp(self):
-        return self.__ten_san_pham
-    def set_ten_sp(self, ten_sp):
-        self.__ten_san_pham = ten_sp
-    def get_gia_sp(self):
+    def get_ten(self):
+        return self.__tensp
+
+    def get_ten(self, ten_sp):
+        self.__tensp = ten_sp
+
+    def get_gia(self):
         return self.__gia
-    def set_gia_sp(self, gia_sp):
+    
+    def set_gia(self, gia_sp):
         self.__gia = gia_sp
-    def get_giam_gia(self):     
-        return self.__Giam_gia
-    def set_giam_gia(self, giam_gia):
-        self.__Giam_gia = giam_gia
+
+    def get_giam_gia(self):
+        return self.__giam_gia
+
+    def get_giam_gia(self, giam_gia_sp):
+         self.__giam_gia = giam_gia_sp
+
     def thue_nhap_khau(self):
-        return self.gia * 0.1
+        return self.__gia * 0.1
+    
     def nhap_thong_tin(self):
-        self.ten_san_pham=input(" ten san pham:")
-        self.gia=float(input("gia san pham:"))
-        self.__Giam_gia=float(input("giam gia:"))
+        self.__tensp = input("Nhập tên sản phẩm: ")
+        self.__gia = float(input("Nhập giá sản phẩm: "))
+        self.__giam_gia = float(input("Nhập giảm giá sản phẩm (%): "))
+
     def xuat_thong_tin(self):
         print(f"Tên sản phẩm: {self.__tensp}")
         print(f"Giá sản phẩm: {self.__gia}")
@@ -45,5 +49,5 @@ class sanpham:
         return self.gia * 0.1
     def xuat_thong_tin(self):
         print(f"sản phẩm {self.ten_san_pham} có giá {self.gia} được giảm giá hết {self.giam_gia} và thuế nhập khẩu {self.thue_nhap_khau()}")
-    def _str_(self):
+    def __str__(self):
         return(f"sản phẩm {self.ten_san_pham} có giá {self.gia} được giảm giá hết {self.giam_gia} và thuế nhập khẩu {self.thue_nhap_khau()}")
