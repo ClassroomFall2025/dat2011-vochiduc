@@ -128,4 +128,4 @@ while True:
             break
         case _:
             print(" Lựa chọn không hợp lệ, vui lòng nhập lại.")
-            print([sv.TenSinhVien for sv in ql.danh_sach])
+            print([sv.TenSinhVien for sv in ql.danh_sach]) 

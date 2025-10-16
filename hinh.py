@@ -22,5 +22,5 @@ class hinhvuong (hinh):
     def xuat(self):
         print(f"cạnh hình vuông :{self.canh}")
         print(f"chu vi hình vuông :{self.tinh_chu_vi()}")
-        print(f"diện tích hình vuông :{self.tinh_dien_tich()}")
+        print(f"diện tích hình vuông :{self.tinh_dien_tich()}") 
     
