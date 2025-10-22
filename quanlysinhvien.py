@@ -9,7 +9,7 @@ class QuanLySinhVien:
             if loai_sinh_vien == "0":
                 print(" Dừng nhập sinh viên.")
                 break
-
+                
             ten_sinh_vien = input("Nhập tên sinh viên: ")
 
             if loai_sinh_vien == "it":
